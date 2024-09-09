@@ -55,22 +55,22 @@ You can watch as much as you want, whenever you want, without a single ad – al
       </div>
 
       <div>
-
-      <section className="w-full max-w-3xl">
-    <p className="text-white text-lg md:text-xl lg:text-2xl mb-5">
-      Ready to watch? Enter your email to create or restart your membership.
-    </p>
-    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <input
-        type="email"
-        placeholder="Email address"
-        className="p-4 h-16 w-full sm:w-[35rem] max-w-full rounded-md bg-black bg-opacity-50 border border-white text-white placeholder-white"
-      />
-      <button className="h-16 w-40 bg-red-600 hover:bg-red-700 text-white py-3 rounded-md text-xl">
-        Get Started &gt;
-      </button>
-    </div>
-  </section>
+        
+        <section className="mb-11 lg:mx-[120px] ">
+          <p className="text-white mx-[20px]  lg:text-center lg:text-xl sm:text-wrap sm:text-sm md:text-center md:text-lg mb-5 ">
+           Ready to watch? Enter your email to create or restart your membership.
+          </p>
+          <div className="text-center flex flex-col sm:flex-row items-center justify-center">
+            <input 
+              type="email" 
+              placeholder="Email address" 
+              className="p-2 sm:p-4 h-12 sm:h-16 w-full sm:w-1/2 max-w-md rounded-md mr-2 bg-black border-[1px] border-white cursor-pointer mb-2 sm:mb-0"
+            />
+            <button className="h-12 sm:h-16 w-36 bg-red-600 hover:bg-red-700 text-white rounded-md text-sm sm:text-xl">
+              Get Started &gt;
+            </button>
+          </div>
+        </section>
 
       </div>
     </div>
