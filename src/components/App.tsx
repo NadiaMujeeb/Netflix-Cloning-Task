@@ -17,10 +17,10 @@ const App: React.FC = () => {
       <FAQSection />
       <Footer />
 
-   <div className='lg:mx-[105px] sm:mx-[120px] mb-8 px-3 sm:px-4
+   <div className='lg:mx-[120px] sm:mx-[120px] mb-8 px-3 sm:px-4
       text-sm sm:text-base'> <Dropdown /> </div>
      <div>    <p className='text-white px-3 sm:px-4
-      text-sm sm:text-base lg:mx-[105px] sm:mx-[120px] mb-28'>Netflix India</p>      </div>
+      text-sm sm:text-base lg:mx-[120px] sm:mx-[120px] mb-28'>Netflix India</p>      </div>
  
 
 </div>
