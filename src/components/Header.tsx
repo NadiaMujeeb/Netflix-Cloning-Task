@@ -1,6 +1,6 @@
 import React from 'react';
 import Dropdown from './DropdownNav';
-import BGImage from "../assets/backgroundImage.jpg";
+import BGImage from "../assets/BackgroundImage.jpg"
 import logo from "../assets/logo.png";
 
 const Header: React.FC = () => {
