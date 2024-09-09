@@ -11,7 +11,7 @@ const DropdownNav: React.FC = () => {
         aria-expanded={isOpen}
         aria-controls="dropdown-menu"
       >
-        <span className="mr-2 ">English</span>
+        <span className="mr-2 w-12 ">English</span>
         <svg
           className="w-4 h-4"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const DropdownNav: React.FC = () => {
       </button>
 
       {isOpen && (
-        <div id="dropdown-menu" className="absolute right-0 mt-2 w-28 bg-white shadow-lg rounded-md">
+        <div id="dropdown-menu" className="absolute right-0 mt-2 w-[108px] bg-white shadow-lg rounded-md">
           <button
             onClick={() => setIsOpen(false)}
             className="block w-full text-left px-4 py-2 text-black hover:bg-gray-300"

@@ -17,8 +17,10 @@ const App: React.FC = () => {
       <FAQSection />
       <Footer />
 
-   <div className=' sm:p-8 lg:mx-[105px] mb-7 '> <Dropdown /> </div>
-     <div>    <p className='text-white sm:p-8 lg:mx-[105px] mb-28'>Netflix India</p>      </div>
+   <div className='lg:mx-[105px] mb-8 px-3 sm:px-4
+      text-sm sm:text-base'> <Dropdown /> </div>
+     <div>    <p className='text-white px-3 sm:px-4
+      text-sm sm:text-base lg:mx-[105px] mb-28'>Netflix India</p>      </div>
  
 
 </div>

@@ -14,13 +14,23 @@ const Header: React.FC = () => {
      
       <img src={logo} alt="logo" className="absolute top-6 left-6 w-24 h-7 sm:left-6 sm:w-24 sm:h-7 md:left-10 md:w-28 md:h-10 lg:left-14 lg:w-32 lg:h-14 xl:left-20 xl:w-32 xl:h-16 object-contain" />
 
-      <nav className="absolute top-6 right-6 lg:right-12 flex items-center gap-4 ">
-        <Dropdown />
-        <button className="bg-red-600 text-white px-4 py-2 rounded-md font-bold hover:bg-red-700">
-          Sign In
-        </button>
-    
-      </nav>
+<nav className="absolute top-6 right-6 lg:right-12  flex items-center gap-4  px-3 sm:px-4
+      text-sm sm:text-base">
+  <Dropdown />
+  <button
+    className="
+      bg-red-600 text-white 
+      px-3 sm:px-4 py-2 
+      text-sm sm:text-base font-bold 
+      rounded-md 
+      hover:bg-red-700
+      transition-all duration-300 ease-in-out
+    "
+  >
+    Sign In
+  </button>
+</nav>
+
 
 <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
 
