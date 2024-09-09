@@ -55,7 +55,7 @@ You can watch as much as you want, whenever you want, without a single ad – al
       </div>
 
       <div>
-        <section className="mb-11 h-full flex flex-col  px-4">
+        <section className="mb-11 h-full flex flex-col justify-center text-center px-4">
           <p className="text-white text-center text-sm sm:text-xl mb-5">
            Ready to watch? Enter your email to create or restart your membership.
           </p>
