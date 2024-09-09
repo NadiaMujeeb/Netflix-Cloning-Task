@@ -75,7 +75,7 @@ You can watch as much as you want, whenever you want, without a single ad – al
 
 
 <div>
-  <div className="bg-black p-4 sm:p-8 mx-4 sm:mx-9 lg:mx-[120px] mb-8">
+  <div className="bg-black p-4 sm:p-8 mx-4 sm:mx-7 lg:mx-[120px] mb-8">
     <h2 className="text-white text-lg sm:text-2xl mb-4 sm:mb-8 font-bold text-left">
       Frequently Asked Questions
     </h2>
@@ -91,7 +91,7 @@ You can watch as much as you want, whenever you want, without a single ad – al
   </div>
 
   <div>
-    <section className="mb-11 mx-4 sm:mx-9 lg:mx-[120px]">
+    <section className="mb-11 mx-4 sm:mx-7 lg:mx-[120px]">
       <p className="text-white text-center text-sm sm:text-xl mb-5">
         Ready to watch? Enter your email to create or restart your membership.
       </p>
