@@ -63,7 +63,7 @@ You can watch as much as you want, whenever you want, without a single ad – al
             <input 
               type="email" 
               placeholder="Email address" 
-              className="p-2 sm:p-4 h-12 sm:h-16 w-full sm:w-1/2 sm:mx-[120px] max-w-md rounded-md mr-2 bg-black border-[1px] border-white cursor-pointer mb-2 sm:mb-0"
+              className="p-2 sm:p-4 h-12 sm:h-16 w-full sm:w-1/2 max-w-md rounded-md mr-2 bg-black border-[1px] border-white cursor-pointer mb-2 sm:mb-0"
             />
             <button className="h-12 sm:h-16 w-36 bg-red-600 hover:bg-red-700 text-white rounded-md text-sm sm:text-xl">
               Get Started &gt;
