@@ -62,10 +62,10 @@ You can watch as much as you want, whenever you want, without a single ad – al
           <div className="text-center flex flex-col sm:flex-row items-center justify-center">
             <input 
               type="email" 
-              placeholder="Email address" 
-              className="p-2 sm:p-4 h-12 sm:h-16 w-full sm:w-1/2 max-w-md rounded-md mr-2 bg-black border-[1px] border-white cursor-pointer mb-2 sm:mb-0"
+              placeholder="Email address"
+              className="p-2 ml-8 mt-8 sm:p-4 h-12 sm:h-16 w-full sm:w-1/2 max-w-md rounded-md mr-2 bg-black border-[1px] border-white mb-2 sm:mb-0"
             />
-            <button className="h-12 sm:h-16 w-36 bg-red-600 hover:bg-red-700 text-white rounded-md text-sm sm:text-xl">
+            <button className="h-12 ml-8 mt-8  sm:h-16 w-36 bg-red-600 hover:bg-red-700 text-white rounded-md text-sm sm:text-xl">
               Get Started &gt;
             </button>
           </div>
