@@ -13,36 +13,36 @@ const Footer: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:flex-wrap justify-between text-lg">
           <div className="flex-1 min-w-[200px] sm:mb-0 sm:w-1/3 lg:w-1/4">
             <ul>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">FAQ</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Help Centre</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Account</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Media Centre</a></li>
+              <li className="mb-[10px]"><a href="https://help.netflix.com/en/node/412" className="hover:text-red-500">FAQ</a></li>
+              <li className="mb-[10px]"><a href="https://ir.netflix.net/ir-overview/profile/default.aspx" className="hover:text-red-500">Investor Relations</a></li>
+              <li className="mb-[10px]"><a href="https://help.netflix.com/legal/privacy" className="hover:text-red-500">Privacy</a></li>
+              <li className="mb-[10px]"><a href="https://fast.com/" className="hover:text-red-500">Speed Test</a></li>
             </ul>
           </div>
           
           <div className="flex-1 min-w-[200px] sm:mb-0 sm:w-1/3 lg:w-1/4">
             <ul>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Investor Relations</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Jobs</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Ways to Watch</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Terms of Use</a></li>
+              <li className="mb-[10px]"><a href="https://help.netflix.com/en" className="hover:text-red-500">Help Centre</a></li>
+              <li className="mb-[10px]"><a href="https://jobs.netflix.com/" className="hover:text-red-500">Jobs</a></li>
+              <li className="mb-[10px]"><a href="https://www.netflix.com/in/" className="hover:text-red-500">Cookie Preferences</a></li>
+              <li className="mb-[10px]"><a href="https://help.netflix.com/legal/notices" className="hover:text-red-500">Legal Notices</a></li>
             </ul>
           </div>
           
           <div className="flex-1 min-w-[200px] sm:mb-0 sm:w-1/3 lg:w-1/4">
             <ul>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Investor Relations</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Jobs</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Ways to Watch</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Terms of Use</a></li>
+              <li className="mb-[10px]"><a href="https://www.netflix.com/in/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fyouraccount" className="hover:text-red-500">Account</a></li>
+              <li className="mb-[10px]"><a href="https://help.netflix.com/en/node/14361" className="hover:text-red-500">Ways to Watch</a></li>
+              <li className="mb-[10px]"><a href="https://help.netflix.com/en/node/134094" className="hover:text-red-500">Corporate Information</a></li>
+              <li className="mb-[10px]"><a href="https://www.netflix.com/in/browse/genre/839338" className="hover:text-red-500">Only on Netflix</a></li>
             </ul>
           </div>
 
           <div className="flex-1 min-w-[200px] sm:mb-0 sm:w-full lg:w-1/4">
             <ul>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Contact Us</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Speed Test</a></li>
-              <li className="mb-[10px]"><a href="#" className="hover:text-white">Legal Notices</a></li>
+              <li className="mb-[10px]"><a href="https://media.netflix.com/en/" className="hover:text-red-500">Media Center</a></li>
+              <li className="mb-[10px]"><a href="https://help.netflix.com/legal/termsofuse" className="hover:text-red-500">Terms of Use</a></li>
+              <li className="mb-[10px]"><a href="https://help.netflix.com/en/contactus" className="hover:text-red-500">Contact Us</a></li>
             </ul>
           </div>
         </div>
