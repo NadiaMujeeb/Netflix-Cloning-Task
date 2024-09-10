@@ -7,7 +7,7 @@ const DropdownNav: React.FC = () => {
     <div className="relative inline-block">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-gray-800 border-2 border-white text-white font-bold px-4 py-2 rounded-md flex items-center justify-between"
+        className="bg-gray-800 border border-white text-white font-bold px-4 py-2 rounded-md flex items-center justify-between"
         aria-expanded={isOpen}
         aria-controls="dropdown-menu"
       >
