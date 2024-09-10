@@ -21,7 +21,7 @@ const SliderItem: React.FC<SliderItemProps> = ({ title, icon, num }) => {
           text-6xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl"
         style={{ 
           top: '55%', 
-          left: '-10%', 
+          left: '-7%', 
           textShadow: '0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white' 
         }}
       >
