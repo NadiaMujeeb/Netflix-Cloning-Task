@@ -30,7 +30,7 @@ const sliderSettings = {
       },
     },
     {
-      breakpoint: 430, 
+      breakpoint: 700, 
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
