@@ -55,9 +55,9 @@ const Header: React.FC = () => {
       <input
         type="email"
         placeholder="Email address"
-        className="p-4 h-16 w-full sm:w-[35rem] max-w-full rounded-md bg-black bg-opacity-50 border border-white text-white placeholder-white"
+        className="p-4 h-14 w-full sm:w-[35rem] max-w-full rounded-md bg-black bg-opacity-50 border border-white text-white placeholder-white"
       />
-      <button className="h-16 w-40 bg-red-600 hover:bg-red-700 text-white py-3 rounded-md text-xl">
+      <button className="h-14 w-40 bg-red-600 hover:bg-red-700 text-white py-3 rounded-md text-xl">
         Get Started &gt;
       </button>
     </div>
