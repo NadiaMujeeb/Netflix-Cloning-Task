@@ -1,7 +1,17 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
+
 
 const DropdownNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleHindiClick = () => {
+    setIsOpen(false); // Close the dropdown
+    console.log("Navigating to Hindi page");
+    navigate("/hindi"); // Navigate to the Hindi component route
+  };
 
   return (
     <div className="relative inline-block">
@@ -31,7 +41,7 @@ const DropdownNav: React.FC = () => {
       {isOpen && (
         <div id="dropdown-menu" className="absolute right-0 mt-2 w-[108px] bg-white shadow-lg rounded-md">
           <button
-            onClick={() => setIsOpen(false)}
+            onClick={handleHindiClick}
             className="block w-full text-left px-4 py-2 text-black hover:bg-gray-300"
           >
             हिंदी
@@ -43,3 +53,5 @@ const DropdownNav: React.FC = () => {
 };
 
 export default DropdownNav;
+
+

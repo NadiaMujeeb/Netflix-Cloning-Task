@@ -8,7 +8,7 @@ interface SliderItemProps {
 
 const SliderItem: React.FC<SliderItemProps> = ({ title, icon, num }) => {
   return (
-    <div className="relative flex items-center justify-center p-2">
+    <div className="relative flex items-center justify-center p-2 hover:scale-105 cursor-pointer">
       <img 
         src={icon} 
         alt={title} 
