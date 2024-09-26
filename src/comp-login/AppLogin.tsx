@@ -5,8 +5,8 @@ import ProtectedRoute from './ProtectedRoute';
 import { AuthProvider } from '../context/AuthContext';
 import Dashboard from "../comp-login/Dashboard";
 import ForgotPass from './ForgotPass';
-import 'primereact/resources/themes/saga-blue/theme.css'; // Change to your preferred theme
-import 'primereact/resources/primereact.min.css';
+import ResetPassword from './ResetPassword';
+import 'primereact/resources/themes/saga-blue/theme.css'; 
 import 'primeicons/primeicons.css';
 
 
@@ -19,6 +19,7 @@ function AppLogin() {
           <Route path="/" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/ForgotPass" element={<ForgotPass/>} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route
             path="/dashboard"
             element={

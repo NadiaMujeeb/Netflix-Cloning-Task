@@ -28,11 +28,11 @@ const SignIn = () => {
         setError('Email and Password are required');
         return;
       }
-
+  
       const response = await signInUser({ email, password });
       localStorage.setItem('token', response.data.token);
-      authContext?.login(response.data.token);  // Trigger login in the context
-
+      authContext?.login(response.data.token);
+  
       // Show welcome message in a toast
       toast.current?.show({
         severity: 'success',
@@ -40,17 +40,18 @@ const SignIn = () => {
         detail: `Welcome back, ${email}!`,
         life: 3000, // Show toast for 3 seconds
       });
-
+  
       // Delay navigation to dashboard until after the toast is shown
       setTimeout(() => {
-        navigate('/dashboard');  // Redirect to dashboard after showing toast
-      }, 3000);
+        navigate('/dashboard'); // Redirect to dashboard after showing toast
+      }, 3000); // Ensure this matches the toast's life duration (3 seconds)
       
     } catch (err: any) {
       console.error('API Error:', err);
       setError(err.response?.data?.message || 'Something went wrong');
     }
   };
+  
 
   return (
     <div className="relative overflow-hidden w-full h-screen flex flex-col justify-center items-center">
