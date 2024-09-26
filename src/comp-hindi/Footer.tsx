@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-black text-gray-400 py-8 px-4 sm:px-8 lg:px-24 xl:px-36 mb-8 underline">
+    <footer className="relative bg-black text-gray-400 py-8 px-4 sm:px-8 lg:px-24 xl:px-36 mb-8 ">
       <div>
         <h4 className="text-white font-semibold text-xl mb-6">
-        कोई सवाल? 000-800-919-1694 पर कॉल करें
+        कोई सवाल? <span className='underline hover:text-yellow-500 cursor-pointer'>000-800-919-1694</span> पर कॉल करें
         </h4>
       </div>
       
