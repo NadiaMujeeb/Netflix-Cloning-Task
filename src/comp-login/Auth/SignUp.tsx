@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { signUpUser } from "../../api/authApi";
+import { signUpUser } from "../../api/authApi";  // Import your signUpUser API function
 import { useNavigate } from 'react-router-dom';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
@@ -10,6 +10,11 @@ import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import { Toast } from 'primereact/toast';
+
+// Define an interface for the expected response from signUpUser
+interface SignUpResponse {
+  token: string;
+}
 
 const SignUp = () => {
   const [name, setName] = useState('');  
@@ -47,13 +52,14 @@ const SignUp = () => {
         return;
       }
 
-      const response = await signUpUser({ name, email, password });
+      // Call the API and define the response type as SignUpResponse
+      const response = await signUpUser({ name, email, password }) as { data: SignUpResponse };
       localStorage.setItem('token', response.data.token);
 
       toast.current?.show({
         severity: 'success',
-        summary: ' New User Created',
-        detail: `Welcome to Netflix, Enjoy watching !`,
+        summary: 'New User Created',
+        detail: 'Welcome to Netflix, Enjoy watching!',
         life: 3000,
       });
 
@@ -88,7 +94,6 @@ const SignUp = () => {
               e.target.style.outline = 'none';
               e.target.style.boxShadow = 'none';  // Remove any box-shadow on focus
             }}
-            
           />
           <InputText
             value={email}
@@ -106,7 +111,7 @@ const SignUp = () => {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             className="w-full mb-3 p-3 h-12 bg-black bg-opacity-50 border text-white"
-            inputStyle={{ backgroundColor: 'transparent'}}
+            inputStyle={{ backgroundColor: 'transparent' }}
             style={{ borderRadius: '0.375rem' }}
             onFocus={(e) => {
               e.target.style.outline = 'none';
@@ -119,7 +124,7 @@ const SignUp = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
             placeholder="Confirm Password"
             className="w-full mb-6 p-3 h-12 bg-black bg-opacity-50 border text-white"
-            inputStyle={{ backgroundColor: 'transparent'}}
+            inputStyle={{ backgroundColor: 'transparent' }}
             style={{ borderRadius: '0.375rem' }}
             onFocus={(e) => {
               e.target.style.outline = 'none';
