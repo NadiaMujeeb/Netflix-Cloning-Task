@@ -11,7 +11,12 @@ import { AutoComplete } from 'primereact/autocomplete';
 import BGImage from "../../assets/BackgroundImage.jpg";
 import logo from "../../assets/logo.png";
 import { AuthContext } from '../../context/AuthContext';
-import { Toast } from 'primereact/toast'; 
+import { Toast } from 'primereact/toast';
+
+// Define the expected response data shape
+interface SignInResponse {
+  token: string;
+}
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -38,9 +43,13 @@ const SignIn = () => {
         return;
       }
   
+      // No type argument here; cast response later
       const response = await signInUser({ email, password });
-      localStorage.setItem('token', response.data.token);
-      authContext?.login(response.data.token);
+      // Cast the response data to the expected type
+      const data = response.data as SignInResponse;
+
+      localStorage.setItem('token', data.token);
+      authContext?.login(data.token);
 
       toast.current?.show({
         severity: 'success',
