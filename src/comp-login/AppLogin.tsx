@@ -6,6 +6,7 @@ import { AuthProvider } from '../context/AuthContext';
 import Dashboard from "../comp-login/Dashboard";
 import ForgotPass from './ForgotPass';
 import ResetPassword from './ResetPassword';
+import AppHindi from "../comp-hindi/AppHindi";
 import 'primereact/resources/themes/saga-blue/theme.css'; 
 import 'primeicons/primeicons.css';
 
@@ -20,6 +21,7 @@ function AppLogin() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/ForgotPass" element={<ForgotPass/>} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path='/hindi' element={<AppHindi/>}   />
           <Route
             path="/dashboard"
             element={
