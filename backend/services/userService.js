@@ -54,29 +54,6 @@ router.post('/forgot-password', async (req, res) => {
     }
 });
 
-// Endpoint for resetting the password
-// router.post('/reset-password', async (req, res) => {
-//     const { token, newPassword } = req.body;
-
-//     try {
-//         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-//         const email = decoded.email;
-
-//         // Hash the new password
-//         const hashedPassword = await bcrypt.hash(newPassword, 10);
-
-//         // Update the password in the database
-//         await pool.query('UPDATE users SET password = $1 WHERE email = $2', [hashedPassword, email]);
-
-//         res.status(200).json({ message: 'Password has been reset successfully.' });
-//     } catch (error) {
-//         console.error('Error resetting password:', error);
-//         res.status(401).json({ message: 'Invalid or expired token.' });
-//     }
-// });
-
-
-
 
 
 // Assuming you have a function to get user by token and update password
@@ -115,14 +92,12 @@ router.post('/signin', async (req, res) => {
 
     try {
         const result = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
-
         if (result.rows.length === 0) {
             return res.status(404).json({ message: 'User not found' });
         }
 
         const user = result.rows[0];
-        const match = await bcrypt.compare(password, user.password); // bcrypt used here
-
+        const match = await bcrypt.compare(password, user.password);
         if (!match) {
             return res.status(401).json({ message: 'Invalid credentials' });
         }

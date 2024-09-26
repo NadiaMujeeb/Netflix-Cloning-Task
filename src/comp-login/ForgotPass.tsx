@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { InputText } from 'primereact/inputtext';
@@ -34,39 +33,39 @@ const ForgotPass: React.FC = () => {
 
     return (
         <div className="relative overflow-hidden w-full h-screen flex flex-col justify-center items-center">
-        <div className="absolute inset-0 z-0">
-          <img src={BGImage} alt="background" className="w-full h-full object-cover" />
-        </div>
+            <div className="absolute inset-0 z-0">
+                <img src={BGImage} alt="background" className="w-full h-full object-cover" />
+            </div>
 
-   
-        <img
-        src={logo}
-        alt="logo"
-        className="absolute top-6 left-6 w-24 h-7 sm:left-6 sm:w-24 sm:h-7 md:left-10 md:w-28 md:h-10 lg:left-14 lg:w-32 lg:h-14 xl:left-20 xl:w-32 xl:h-16 object-contain"
-      />
+            <img
+                src={logo}
+                alt="logo"
+                className="absolute top-6 left-6 w-24 h-7 sm:left-6 sm:w-24 sm:h-7 md:left-10 md:w-28 md:h-10 lg:left-14 lg:w-32 lg:h-14 xl:left-20 xl:w-32 xl:h-16 object-contain"
+            />
 
-
-<div className="max-w-md mx-auto mt-20 p-10 relative z-10 bg-black bg-opacity-75 rounded-lg shadow-lg md:mt-16 lg:mt-20">
-            <h2 className="text-2xl font-bold mb-5 text-white">Forgot Password</h2>
-            <form onSubmit={handleSubmit}>
- 
-            <InputText
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email Address"
-            
-            required            
-            className="w-full mb-3 p-3 h-12 bg-black bg-opacity-50 border text-white"
-            style={{ borderRadius: '0.375rem' }}   />             
-                
-                
-                
-                <Button type="submit" label="Email Me" className="w-full h-11 mb-5 p-2 bg-red-700 text-white hover:bg-red-600 transition duration-200" />
-
-            </form>
-            {message && <p className="mt-4 text-green-600">{message}</p>}
-            {error && <p className="mt-4 text-red-600">{error}</p>}
-
+            <div className="max-w-md mx-auto mt-20 p-6 sm:p-8 md:p-10 lg:p-12 relative z-10 bg-black bg-opacity-75 rounded-lg shadow-lg">
+                <h2 className="text-2xl sm:text-2xl md:text-2xl font-bold mb-5 text-white text-left">Forgot Password</h2>
+                <form onSubmit={handleSubmit}>
+                    <InputText
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Email Address"
+                        required
+                        className="w-full mb-3 p-3 h-12 bg-black bg-opacity-50 border text-white"
+                        style={{ borderRadius: '0.375rem' }}
+                        onFocus={(e) => {
+                            e.target.style.outline = 'none';
+                            e.target.style.boxShadow = 'none';  // Remove any box-shadow on focus
+                        }}
+                    />
+                    <Button 
+                        type="submit" 
+                        label="Email Me" 
+                        className="w-full h-11 mb-5 p-2 bg-red-700 text-white hover:bg-red-600 transition duration-200" 
+                    />
+                </form>
+                {message && <p className="mt-4 text-green-600 text-center">{message}</p>}
+                {error && <p className="mt-4 text-red-600 text-center">{error}</p>}
             </div>
         </div>
     );
