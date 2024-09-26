@@ -107,7 +107,7 @@ const SignIn = () => {
             placeholder="Email"
             required
             className="w-full mb-3 p-3 h-12 bg-black bg-opacity-50 border text-white"
-            inputStyle={{ backgroundColor: 'transparent' }}
+            inputStyle={{ backgroundColor: 'transparent', width: "100%" }}
             style={{ borderRadius: '0.375rem' }}
             onFocus={(e) => {
               e.target.style.outline = 'none';
