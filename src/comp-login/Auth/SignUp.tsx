@@ -63,12 +63,16 @@ const SignUp = () => {
         life: 3000,
       });
 
-      navigate('/dashboard');
-    } catch (err: any) {
+        // Navigate to dashboard after a delay
+        setTimeout(() => {
+          navigate('/dashboard');
+      }, 3000); // 3000 milliseconds = 3 seconds
+
+  } catch (err: any) {
       console.error('API Error:', err);
       setError(err.response?.data?.message || 'Something went wrong');
-    }
-  };
+  }
+};
 
   return (
     <div className="relative overflow-hidden w-full h-screen flex flex-col items-center justify-center">
