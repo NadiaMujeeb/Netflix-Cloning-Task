@@ -127,4 +127,29 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
-module.exports = { signUp, signIn, updateUser, deleteUser };
+// Function to reset password
+const resetPassword = async (req, res) => {
+  const { token, newPassword } = req.body;
+
+  try {
+    // Verify the token
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    // Find the user by email from the decoded token
+    const userEmail = decoded.email;
+    
+    // Hash the new password
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+    // Update the user's password in the database
+    await pool.query('UPDATE users SET password = $1 WHERE email = $2', [hashedPassword, userEmail]);
+
+    return res.status(200).json({ message: 'Password reset successfully!' });
+  } catch (error) {
+    console.error('Error resetting password:', error);
+    return res.status(500).json({ message: 'Failed to reset password. Please try again later.' });
+  }
+};
+
+
+module.exports = { signUp, signIn, updateUser, deleteUser, resetPassword };

@@ -31,25 +31,6 @@ const pool = new Pool({
 
 
 
-// Assuming you have this in your password reset route
-app.post('/api/reset-password', async (req, res) => {
-  const { token, newPassword } = req.body;
-
-  try {
-      // Generate a salt and hash the new password
-      const salt = await bcrypt.genSalt(10);
-      const hashedPassword = await bcrypt.hash(newPassword, salt);
-
-      // Update the user's password in the database (example)
-      // const user = await User.findOneAndUpdate({ resetToken: token }, { password: hashedPassword });
-
-      res.json({ message: 'Password successfully reset!' });
-  } catch (error) {
-      console.error('Error resetting password:', error);
-      res.status(500).json({ message: 'Internal server error' });
-  }
-});
-
 
 
 
@@ -101,23 +82,29 @@ app.post('/api/forgot-password', async (req, res) => {
 
 // Add this in your index.js or routes file
 app.post('/api/reset-password', async (req, res) => {
-  const { token, newPassword } = req.body;
+    const { token, newPassword } = req.body;
 
-  try {
-      // Verify the token
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      const email = decoded.email;
+    try {
+        // Verify the token
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const email = decoded.email;
 
-      // Update the password in the database
-      const hashedPassword = await bcrypt.hash(newPassword, 10); // Assuming bcrypt is used for hashing
-      await pool.query('UPDATE users SET password = $1 WHERE email = $2', [hashedPassword, email]);
+        // Update the password in the database
+        const hashedPassword = await bcrypt.hash(newPassword, 10); // Hash the new password
+        const result = await pool.query('UPDATE users SET password = $1 WHERE email = $2 RETURNING *', [hashedPassword, email]);
 
-      res.status(200).json({ message: 'Password reset successfully.' });
-  } catch (error) {
-      console.error('Error resetting password:', error);
-      res.status(500).json({ message: 'Failed to reset password.' });
-  }
+        // Check if any row was updated
+        if (result.rowCount === 0) {
+            return res.status(404).json({ message: 'User not found or password not updated.' });
+        }
+
+        res.status(200).json({ message: 'Password reset successfully.' });
+    } catch (error) {
+        console.error('Error resetting password:', error);
+        res.status(500).json({ message: 'Failed to reset password.' });
+    }
 });
+
 
 
 
